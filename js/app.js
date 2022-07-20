@@ -1,5 +1,19 @@
 const idPost = document.getElementById("idPost");
 
+const parseo = () => {
+  const post = {
+    userId: 15,
+    title: "Nuevo Amanecer",
+    body: "El amanecer del ayer",
+  };
+  //   const post = [1, 3, 5];
+  console.log(post);
+  let convertido = JSON.stringify(post);
+  console.log(convertido);
+  let desconvertido = JSON.parse(convertido);
+  console.log(desconvertido);
+};
+
 const obtenerPosts = async () => {
   const respuesta = await fetch("https://jsonplaceholder.typicode.com/posts");
   const datos = await respuesta.json();
